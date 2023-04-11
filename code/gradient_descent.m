@@ -5,14 +5,9 @@
 
 disp('Inputs:');
 lambda = input('Learning Rate (lambda): ');
-%w1_value = input('w1 starting point: ');
-%w2_value = input('w2 starting point: ');
-%f_input = input('Enter a function f(w1,w2): ', 's');
-
-w1_value = 5;
-w2_value = 5;
-f_input = 'w1.^2 +1*w1.*w2 + 2*w2.^2';
-
+w1_value = input('w1 starting point: ');
+w2_value = input('w2 starting point: ');
+f_input = input('Enter a function f(w1,w2): ', 's');
 
 f = str2func(['@(w1, w2) ' f_input]);
 
@@ -57,6 +52,7 @@ end
 
 z = given_function(w1_value, w2_value);
 
+disp(['Results:']);
 disp(['Learning Rate: lambda = ', num2str(lambda)]);
 disp(['Maximum Number of Steps = ', num2str(N_max)]);
 disp(['Termination Tolerance = ', num2str(toler)]);
